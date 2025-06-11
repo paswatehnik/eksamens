@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 public class tests {
     public static void main(String[] args) {
+    	
         int punkti = 0;
         String[] atbildes;
         
@@ -17,6 +18,8 @@ public class tests {
             null, 
             atbildes, 
             atbildes[0]);
+        
+        if(atbilde1 == 0 || atbilde1 == 2) punkti++;
 
         // 2. jautājums
         atbildes = new String[]{"Math.abs(-5)", "Math.max(3, 5)", "Math.sqrt(9)"};
@@ -28,6 +31,8 @@ public class tests {
             null, 
             atbildes, 
             atbildes[0]);
+        
+        if(atbilde2 == 0 || atbilde2 == 2) punkti++;
 
         // 3. jautājums
         atbildes = new String[]{"2", "3", "2.5"};
@@ -39,6 +44,8 @@ public class tests {
             null, 
             atbildes, 
             atbildes[0]);
+        
+        if(atbilde3 == 0 || atbilde3 == 1) punkti++;
 
         // 4. jautājums
         atbildes = new String[]{"Math.random()", "new Random().nextInt(10)", "Math.pow(2, 3)"};
@@ -50,6 +57,8 @@ public class tests {
             null, 
             atbildes, 
             atbildes[0]);
+        
+        if(atbilde4 == 0 || atbilde4 == 1) punkti++;
 
         // 5. jautājums
         atbildes = new String[]{"a % b", "a / b", "Math.floorMod(a, b)"};
@@ -62,6 +71,7 @@ public class tests {
             atbildes, 
             atbildes[0]);
         
+        if(atbilde5 == 0 || atbilde5 == 2) punkti++;
 
         // 6. jautājums
         atbildes = new String[]{"8.0", "6", "64.0"};
@@ -74,6 +84,7 @@ public class tests {
             atbildes, 
             atbildes[0]);
         
+        if(atbilde6 == 0 || atbilde6 == 1) punkti++;
 
         // 7. jautājums
         atbildes = new String[]{"4.0", "5.0", "4"};
@@ -86,6 +97,7 @@ public class tests {
             atbildes, 
             atbildes[0]);
         
+        if(atbilde7 == 0 || atbilde7 == 2) punkti++;
 
         // 8. jautājums
         atbildes = new String[]{"a++", "++a", "a += 1"};
@@ -98,6 +110,7 @@ public class tests {
             atbildes, 
             atbildes[0]);
         
+        if(atbilde8 == 0 || atbilde8 == 1 || atbilde8 == 2) punkti++;
 
         // 9. jautājums
         atbildes = new String[]{"3.0", "4.0", "3"};
@@ -110,6 +123,7 @@ public class tests {
             atbildes, 
             atbildes[0]);
         
+        if(atbilde9 == 0 || atbilde9 == 2) punkti++;
 
         // 10. jautājums
         atbildes = new String[]{"0.0-1.0", "1-10", "jebkurš vesels skaitlis"};
@@ -121,6 +135,13 @@ public class tests {
             null, 
             atbildes, 
             atbildes[0]);
+        
+        if(atbilde10 == 0 || atbilde10 == 1) punkti++;
 
+        // Rezultātu izvade
+        JOptionPane.showMessageDialog(null, 
+            "Tests pabeigts!\nJūsu rezultāts: " + punkti + " no 10 iespējamajiem punktiem", 
+            "Rezultāti", 
+            JOptionPane.INFORMATION_MESSAGE);
     }
 }
