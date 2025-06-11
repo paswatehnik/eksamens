@@ -5,6 +5,24 @@ import javax.swing.JOptionPane;
 public class tests {
     public static void main(String[] args) {
     	
+    	// Sākuma logs
+        String[] opcijas = {"Sākt testu", "Iziet"};
+        int sakumaIzvele = JOptionPane.showOptionDialog(
+            null,
+            "Laipni lūdzam Java matemātisko funkciju testā!\nVai vēlaties sākt testu?",
+            "Sveiciens",
+            JOptionPane.DEFAULT_OPTION,
+            JOptionPane.INFORMATION_MESSAGE,
+            null,
+            opcijas,
+            opcijas[0]
+        );
+
+        if (sakumaIzvele != 0) {
+            JOptionPane.showMessageDialog(null, "Tests tika atcelts. Uz redzēšanos!");
+            System.exit(0);
+        }
+    	
         int punkti = 0;
         String[] atbildes;
         
